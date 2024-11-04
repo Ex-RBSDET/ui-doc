@@ -1,4 +1,6 @@
 name: Publish to GitHub Pages with Lunr Search Extension
+env:
+      GIT_CREDENTIALS: ${{ secrets.GIT_CREDENTIALS }}
 on:
   push:
     branches: [master]
