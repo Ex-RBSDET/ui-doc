@@ -5,9 +5,11 @@ runtime:
   fetch: true
 content:
   sources:
-    - url: ~/Desktop/projects/aqua/doc/aqua-doc-source
+    - url: https://github.com/Ex-RBSDET/team-doc.git
+      branches: master
       start_path: aqua
-    - url: ~/Desktop/projects/aqua/doc/phaser-doc-source
+    - url: https://github.com/Ex-RBSDET/phaser-doc.git
+      branches: master
       start_path: phaser
 ui:
   bundle:
