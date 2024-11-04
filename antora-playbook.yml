@@ -1,0 +1,19 @@
+site:
+  title: Aqua
+  start_page: aqua-doc::index.adoc
+runtime:
+  fetch: true
+content:
+  sources:
+    - url: ~/Desktop/projects/aqua/doc/aqua-doc-source
+      start_path: aqua
+    - url: ~/Desktop/projects/aqua/doc/phaser-doc-source
+      start_path: phaser
+ui:
+  bundle:
+    url: ui-bundle
+    snapshot: true
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      languages: [en,ru]

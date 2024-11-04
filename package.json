@@ -1,0 +1,22 @@
+{
+	"name": "aqua-doc",
+	"version": "1.0",
+	"description": "Documentation for all the public aqua projects",
+	"main": "index.js",
+	"scripts": {
+		"win-clean": "powershell if (Test-Path -LiteralPath 'build') {Remove-Item build -Force -Recurse -Verbose} else {}",
+		"mac-clean": "rm -rf some_dir build",
+		"doc": "npx antora --fetch antora-playbook.yml",
+		"win-open": "powershell ii build/site/index.html",
+		"mac-open": "open build/site/index.html",
+		"win-rebuild": "npm run win-clean && npm run doc && npm run win-open",
+		"mac-rebuild": "npm run mac-clean && npm run doc && npm run mac-open"
+	},
+	"authour": "aqua",
+	"license": "MIT",
+	"dependencies": {
+		"@antora/cli": "^3.1.7",
+		"@antora/lunr-extension": "^1.0.0-alpha.8",
+		"@antora/site-generator": "^3.1.7"
+	}
+}
